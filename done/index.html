@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>PayFunc Onboard</title>
+	<script>
+		query = parseQuery(location.search)
+		function parseQuery(queryString) {
+		var result = {}
+		var pairs = (queryString[0] === "?" ? queryString.substr(1) : queryString).split("&")
+		for (var i = 0; i < pairs.length; i++) {
+			var pair = pairs[i].split("=")
+			const property = decodeURIComponent(pair[0])
+			const value = JSON.parse(decodeURIComponent(pair[1] || ""))
+			if (result.hasOwnProperty(property)) {
+				const before = result[property]
+				if (Array.isArray(before))
+					result[property].push(value)
+				else
+					result[property] = [ before, value ]
+			} else
+				result[property] = value
+		}
+		return result
+	}
+	console.log("query", query)
+	</script>
+</head>
+<body>
+	<header><h1>Thank you</h1></header>
+	<main>
+		<code>
+			<pre>
+
+			</pre>
+		</code>
+	</main>
+	<script>
+		const element = document.body.querySelector("body > main > code > pre")
+		const data = JSON.stringify(query, null, 2)
+		element.textContent = data
+	</script>
+</body>
+</html>

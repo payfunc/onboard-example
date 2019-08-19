@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>PayFunc Onboard</title>
+	<script type="module" src="https://payfunc.azurewebsites.net/onboard/build/payfunc-onboard.esm.js"></script>
+	<script nomodule src="https://payfunc.azurewebsites.net/onboard/build/payfunc-onboard.js"></script>
+	<link href="https://payfunc.azurewebsites.net/onboard/build/payfunc-onboard.css" rel="stylesheet">
+</head>
+<body>
+	<header><h1>PayFunc Onboard</h1></header>
+	<main>
+		<form action="done" method="get">
+			<payfunc-onboard
+				number="customer-number-001"
+				api-key="<public-api-key>"
+				></payfunc-onboard>
+		</form>
+	</main>
+</body>
+</html>
