@@ -1,0 +1,21 @@
+{
+  "name": "onboard-example",
+  "version": "0.0.0",
+  "description": "Example on how to integrate PayFunc Onboard.",
+  "scripts": {
+    "start": "static-server ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/payfunc/onboard-example.git"
+  },
+  "author": "PayFunc",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/payfunc/onboard-example/issues"
+  },
+  "homepage": "https://github.com/payfunc/onboard-example#readme",
+  "devDependencies": {
+    "static-server": "^2.2.1"
+  }
+}
