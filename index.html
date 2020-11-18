@@ -5,8 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<title>PayFunc Onboard</title>
-	<script type="module" src="https://api.payfunc.com/ui/onboard/payfunc-onboard/payfunc-onboard.esm.js"></script>
-	<script nomodule src="https://api.payfunc.com/ui/onboard/payfunc-onboard/payfunc-onboard.js"></script>
+	<style>
+		main > form > smoothly-input {
+			border: 2px solid rgb(var(--smoothly-primary-color));
+			border-top-width: 1px;
+			border-bottom-width: 0;
+		}
+		main > form > smoothly-input:first-of-type {
+			border-top-width: 2px;
+		}
+		main > form > smoothly-input:last-of-type {
+			border-bottom-width: 2px;
+			margin-bottom: 1em;
+		}
+	</style>
+	<script type="module" src="https://ui.payfunc.com/component/payfunc-component/payfunc-component.esm.js"></script>
+  <script nomodule src="https://ui.payfunc.com/component/payfunc-component/payfunc-component.js"></script>
 	<link href="https://theme.payfunc.com/light/index.css" rel="stylesheet">
 	<link rel="icon" type="image/x-icon" href="./icon/favicon.ico">
 </head>
@@ -14,6 +28,12 @@
 	<header><h1>PayFunc Onboard</h1></header>
 	<main>
 		<form action="done" method="get">
+			<smoothly-input type="text" name="name"  >
+				Name
+			</smoothly-input>
+			<smoothly-input type="email" name="email">
+				Email
+			</smoothly-input>
 			<payfunc-onboard
 				number="customer-number-001"
 				api-key="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2FwaS5wYXlmdW5jLmNvbSIsImlhdCI6MTU4MzUwOTEzMzUwMywiYXVkIjoicHVibGljIiwic3ViIjoiZGVtb2RlbW8iLCJhZ2VudCI6IlBheUZ1bmMiLCJ0eXBlIjoidGVzdCIsImlkIjoiZGVtb2RlbW8iLCJuYW1lIjoiRGVtbyBBQiIsIm9wdGlvbiI6eyJjYXJkIjoiZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SnBjM01pT2lKb2RIUndjem92TDJGd2FTNWpZWEprWm5WdVl5NWpiMjBpTENKcFlYUWlPakUxT0RNMU1Ea3dOek0xTURVc0ltRjFaQ0k2SW5CMVlteHBZeUlzSW5OMVlpSTZJbVJsYlc4aUxDSmhaMlZ1ZENJNklsQmhlVVoxYm1NaUxDSjBlWEJsSWpvaWRHVnpkQ0lzSW1sa0lqb2laR1Z0YnlJc0ltNWhiV1VpT2lKRVpXMXZJRUZDSWl3aWRYSnNJam9pYUhSMGNEb3ZMMlY0WVcxd2JHVXVZMjl0SWl3aVpHVnpZM0pwY0hSdmNpSTZJbVJsYlc4Z2RISmhibk5oWTNScGIyNGlMQ0pqYjNWdWRISjVJam9pVTBVaUxDSmhZM0YxYVhKbGNpSTZJbVZXVVVoRmNrUmpNM1ptUjJOMk1FTjBVRkZtWW5aWFV6TnFkVk5PUjBVemNXcDRiRFUzZEhCbU1rUmtSRzlVUldWQlNGcG9PRzlvVW1kUlVIcHlXVEV3UzNadVpsWlNjR1ptTUdSUFNqaFNlbFUyWlV0SE1HbE1RMHB5V2xocmFVOXBTWHBPYlZVelRrZEZNazlUTUROYWJWWnNURlJTYUUxNlkzUlpiVTVyVDFNd01sbFVSVEJOYWtsM1RXcG9iVnBxVFdsTVEwcHBZVmMwYVU5dWMybGtiV3g2V1ZOSk5rbHFVWHBQUkUxM1QxTkpjMGx0TVdoak0xSnNZMjFPYUdOdFVXbFBhVWt4VFdwWk1VNTZSV2xtV0RBaUxDSnRhV1FpT2lJeE1qTTBJaXdpYldOaklqb2lNVEl6TkNJc0ltVnRkak5rSWpvaVVUbHlNVWRTYUZOdVVuaEpUV2RKYVZwU2VHVTJZMEppUzNsemJIQmxVREIxYmpFNVUxUmxWekJITlRGUWJHUnNWRmRPTjFsbGEyNUtaWFpMYURsRGNteExkM05qTFdKM01HZENlbnB2TTFKWWRqRTNkVzFXTlVscWIybGliVGgwWVRKV05VbHVNQ0o5LldISXVPT3N5LXFrSUtiS05jdUpNU0l3dmhFdlh5MkVXQkpaRnVwZXhEc2MifX0.Kq4dSekS1HV4PleHzR0E7dZ8V2L222v4-XKMcT-W_po"
